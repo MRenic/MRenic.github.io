@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="index.css"/>
+        <link rel="stylesheet" href="bootstrap.css"/>
+        <link href="fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"/>
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+        <title>Početna stranica</title>
+    </head>
+    <body>
+        <div class="wrapper1">
+            <button id="totop" onclick="topFunction()">/\ Top</button>
+            <script>
+                //Get the button
+                var mybutton = document.getElementById("totop");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                        mybutton.style.display = "block";
+                    }else{
+                        mybutton.style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+            <!-- header -->
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1 id="h1">Početna stranica</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- nav -->
+            <nav>
+                <div id="menu-wrapper">
+                    <div id="menu" class="container">
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li><a href="index.html">Početna stranica</a></li>
+                                    <li><a href="nasausluga.html">Naša usluga</a></li>
+                                    <li><a href="upute.html">Upute za korištenje</a></li>
+                                    <li><a href="zadatci.html">Zadatci</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <div class="container wrapper2">
+                <div class="row">
+                    <div class="col">
+                        <div class="backgroundBox">
+                            <h3>Kratki uvod u web aplikaciju</h3>
+                            <p>Naša web aplikacija je kreirana s ciljem da pomognemo školarcima od 1. do 3. razreda sa učenjem i ponavljanjem gradiva matematike. Korisnik može odabrati razred, polugodište, specifično gradivo i broj zadataka koje želi rješavati. Web aplikacija će na temelju zadanih parametara nasumično generirati matematičke zadatke</p>
+                            <div id="menu">
+                                <ul class="d-flex justify-content-center">
+                                    <li><a href="zadatci.html">Isprobaj odmah!</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="backgroundBox">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <h3>Kratke upute za korištenje</h3>
+                                        <p>Za početak, trebate otići na podstranicu <b>"ZADATCI"</b>. To možete postići pritiskom na gumb u navigaciji sa istim imenom. Kada se nalazite na ispravnoj stranici, potrebno je odabrati razred da okvirno kažete aplikaciju kakve matematičke zadatke želite riješavati. Ako želite preciznije definirati zadatke, odaberite polugodište i teme. Na desnoj strani web aplikacije biti će prikazan primjer zadatka koji možete očekivati. Kada je sve postavljeno po vašoj želji, pritisnite gumb <b>"Kreni s rješavanjem!"</b>. U slučaju da ne želite više rješavati matematičke zadatke, možete prekinuti u bilokojem trenutku pritiskom na gumb <b>"Odustani"</b>. Navedeni gumb će vratiti na početnu stranicu web aplikacije, tj. ovdje gdje se sada nalazite.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <figure>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img src="img/placeholder.png" class="imgMain"/>
+                                                        <img src="img/placeholder.png" class="imgMain"/>
+                                                        <img src="img/placeholder.png" class="imgMain"/>
+                                                        <img src="img/placeholder.png" class="imgMain"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

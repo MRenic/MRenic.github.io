@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="zadatci.css"/>
+        <link rel="stylesheet" href="bootstrap.css"/>
+        <link href="fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"/>
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+        <title>Zadatci</title>
+    </head>
+    <body>
+        <div class="wrapper1">
+            <button id="totop" onclick="topFunction()">/\ Top</button>
+            <script>
+                //Get the button
+                var mybutton = document.getElementById("totop");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                        mybutton.style.display = "block";
+                    }else{
+                        mybutton.style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+            <!-- header -->
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1 id="h1">Zadatci</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- nav -->
+            <nav>
+                <div id="menu-wrapper">
+                    <div id="menu" class="container">
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li><a href="index.html">Početna stranica</a></li>
+                                    <li><a href="nasausluga.html">Naša usluga</a></li>
+                                    <li><a href="upute.html">Upute za korištenje</a></li>
+                                    <li><a href="zadatci.html">Zadatci</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <div class="container wrapper2">
+                <div class="row">
+                    <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                        <div class="backgroundBox">
+                            <form class="fontAdjust">
+                                <label>Odaberi razred:</label><br/>
+                                <input type="checkbox" name="class1" value="1"><label class="fontAdjustS">1. razred</label><br/>
+                                <input type="checkbox" name="class2" value="2"><label class="fontAdjustS">2. razred</label><br/>
+                                <input type="checkbox" name="class3" value="3"><label class="fontAdjustS">3. razred</label><br/><br/>
+                                <label>Odaberi polugodište:</label><br/>
+                                <input type="checkbox" name="half" value="1"><label class="fontAdjustS">1. polugodište</label><br/>
+                                <input type="checkbox" name="half2" value="2"><label class="fontAdjustS">2. polugodište</label><br/><br/>
+                                <img src="img/lecture_placeholder.png" style="width:100%;"/><br/><br/>
+                                <!-- <input type="submit" name="go" value="KRENI S RJEŠAVANJEM!" id="submitB"> -->
+                                <a href="rjesavanjeZadataka.html" id="goTemp">KRENI S RJEŠAVANJEM!</a>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                        <div class="backgroundBox">
+                            <!-- Preview primjera zadataka -->
+                            <h4>Primjer zadataka za odabrano gradivo</h4>
+                            <img src="img/example_placeholder.png" style="width:100%;"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
